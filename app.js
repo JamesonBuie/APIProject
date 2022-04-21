@@ -65,10 +65,16 @@ async function request(index) {
         stadiumPhoto.append(stadium);
 
         // Putting formed year on page
-        const yearFormed = document.querySelector(`section#teamInfo>#year`);
+        const yearFormed = document.querySelector(`section#teamInfo>#year>h4#yearEst`);
         const year = document.createElement(`h3`);
         year.innerText = response.data.teams[index - 1].intFormedYear;
         yearFormed.append(year);
+
+        // Putting stadium location on page
+        const locationH4= document.querySelector(`section#teamInfo>#year>h4#location`)
+        const location = document.createElement(`h3`)
+        location.innerText = response.data.teams[index-1].strStadiumLocation 
+        locationH4.append(location)
 
         // Putting uniform on page
         const jerseyDiv = document.querySelector(`section#teamInfo>#jersey`)
