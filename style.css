@@ -130,6 +130,9 @@ h2 {
 #year {
     grid-column-start: 10;
     grid-column-end: 12;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
 }
 #year h3 {
     color: #D50032;
