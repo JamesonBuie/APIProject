@@ -55,12 +55,17 @@ async function request(index) {
         rosterDiv.insertAdjacentElement("beforebegin", teamName)
 
 
-        // Putting team description on the page
-        const descriptDiv = document.querySelector(`section#teamInfo>#description`)
-        const descript = document.createElement(`p`);
-        descript.innerText = response.data.teams[index-1].strDescriptionEN;
-        descriptDiv.append(descript);
+        // Putting team manager name on the page
+        const managerH2 = document.querySelector(`section#teamInfo>#description>h4#manager`)
+        const manager = document.createElement(`h3`)
+        manager.innerText = response.data.teams[index - 1].strManager;
+        managerH2.append(manager)
 
+        // Putting home field name on the page 
+        const fieldH2 = document.querySelector(`section#teamInfo>#description>h4#homeField`)
+        const field = document.createElement(`h3`)
+        field.innerText = response.data.teams[index-1].strStadium 
+        fieldH2.append(field)
         // Putting team logo on the page
         const logoDiv = document.querySelector(`section#teamInfo>#logo`);
         const logo = document.createElement(`img`)
@@ -82,8 +87,16 @@ async function request(index) {
         // Putting uniform on page
         const jerseyDiv = document.querySelector(`section#teamInfo>#jersey`)
         const jersey = document.createElement(`img`)
-        jersey.src = response.data.teams[index-1].strTeamJersey;
+        jersey.src = response.data.teams[index - 1].strTeamJersey;
         jerseyDiv.append(jersey)
+
+        // Selecting social media div
+        const socialMediaDiv = document.querySelector(`section#teamInfo>#socialMedia`)
+        // Putting team twitter on the page
+        const twitter = document.querySelector(`section#teamInfo>#socialMedia>i#twitter`);
+        const twitterLink = document.createElement(`a`);
+        twitterLink.href = response.data.teams[index - 1].strTwitter;
+        twitter.append(twitterLink)
 
 
     } catch (err) {
@@ -97,6 +110,6 @@ form.addEventListener(`submit`, chicken => {
 });
 
 // Function that reloads page
-function refreshPage(){
+function refreshPage() {
     window.location.reload();
 } 

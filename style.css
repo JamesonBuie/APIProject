@@ -70,9 +70,6 @@ h2 {
 /* Team info section */
 #teamInfo {
     display: grid;
-    /* grid-template-columns: 200px 400px 200px; */
-
-    border: 3px solid black;
     position: absolute;
     left: 440px;
     top: 130px;
@@ -90,54 +87,77 @@ h2 {
 }
 
 #description {
-    border: 3px solid black;
     grid-column-start: 4;
     grid-column-end: 10;
+   
 }
 
-#description p {
-    font-size: 11px;
-    text-align: left;
-    max-width: 440.34px;
-    max-height: 325px;
+#description #homeField {
+    position: relative;
+    top: 70px;
 }
+#description h3 {
+    font-size: 20px;
+    color: #D50032;
+}
+
 
 #logo {
-    border: 3px solid black;
     grid-column-start: 1;
     grid-column-end: 4;
-    max-width: 261.98px;
-    max-height: 325px;
+}
+
+#logo img {
+    max-width: 260px;
+    max-height: 300px;
 }
 
 #year {
     grid-column-start: 10;
     grid-column-end: 12;
-    max-width: 247.67px;
-    max-height: 325px;
-    border: 3px solid black;
 }
 
 #jersey {
-    border: 3px solid black;
     grid-column-start: 1;
     grid-column-end: 4;
-    max-width: 261.98px;
-    max-height: 325px;
+}
+
+#jersey img {
+    max-width: 260px;
+    max-height: 300px;
+
 }
 
 #stadiumPic {
-    border: 3px solid black;
     grid-column-start: 4;
     grid-column-end: 10;
-    max-width: 440.34px;
-    max-height: 325px;
+}
+
+#stadiumPic img {
+    max-width: 420px;
+    max-height: 300px;
+
 }
 
 #socialMedia {
-    border: 3px solid black;
     grid-column-start: 10;
     grid-column-end: 12;
-    max-width: 247.67px;
-    max-height: 325px;
+}
+
+i {
+    font-size: 50px;
+}
+
+#twitter {
+    color: #00acee;
+}
+
+#facebook {
+    color: #4267B2;
+}
+#instagram {
+    color: #8a3ab9;
+}
+section div {
+    border: 3px solid #D50032;
 }
