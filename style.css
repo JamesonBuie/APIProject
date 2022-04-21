@@ -3,6 +3,23 @@
 * {
     font-family: 'Vazirmatn', sans-serif
 }
+body {
+    background-color: #002D72;
+}
+#mlbLogoOne {
+    position: absolute;
+    top: -40px;
+    left: 25px;
+    height: 200px;
+    width: 220px;
+}
+#mlbLogoTwo {
+    position: absolute;
+    top: -40px;
+    right: 25px;
+    height: 200px;
+    width: 220px;
+}
 
 /* Title */
 .titleName h1 {
@@ -12,6 +29,7 @@
 
 h1 span {
     color: #D50032;
+   
 }
 
 /* Search bar */
@@ -32,14 +50,12 @@ h1 span {
 /* Team name Section */
 #roster {
     /* display: flex; */
+    background-color: whitesmoke;
     width: 360px;
     height: 470px;
     position: absolute;
-    top: 200px;
-    border: 5px solid #002D72;
-    background-color: white;
-
-
+    top: 220px;
+    border: 5px solid #D50032;
 }
 
 #roster h4 {
@@ -64,15 +80,17 @@ h1 span {
 h2 {
     position: absolute;
     left: 75px;
+   top: 150px;
     color: #D50032;
 }
 
 /* Team info section */
 #teamInfo {
+    background-color: whitesmoke;
     display: grid;
     position: absolute;
     left: 440px;
-    top: 130px;
+    top: 150px;
     width: 950px;
     height: 650px;
     color: #002D72;
@@ -89,12 +107,9 @@ h2 {
 #description {
     grid-column-start: 4;
     grid-column-end: 10;
-   
-}
-
-#description #homeField {
-    position: relative;
-    top: 70px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
 #description h3 {
     font-size: 20px;
@@ -115,6 +130,9 @@ h2 {
 #year {
     grid-column-start: 10;
     grid-column-end: 12;
+}
+#year h3 {
+    color: #D50032;
 }
 
 #jersey {
@@ -143,9 +161,16 @@ h2 {
     grid-column-start: 10;
     grid-column-end: 12;
 }
+#links {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: space-between;
+}
 
 i {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 #twitter {

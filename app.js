@@ -8,26 +8,6 @@ Jersey = strTeamJersey
 
 */
 
-
-
-
-
-// Function that sends GET request
-// Returns an array of all 30 mlb teams
-// async function getSportsData() {
-
-//     try {
-//        const dataPointOne = await axios.get(`https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=MLB`);
-//        console.log(`Get request was successful`);
-//        console.log(dataPointOne.data.teams);
-
-//     } catch(err){
-//         console.log(`Get request was not successful`);
-//         console.log(err);
-//     }
-// }
-// getSportsData();
-
 const div = document.querySelector(`div`);
 const form = document.querySelector(`form`);
 const textInput = document.querySelector(`input[type='text']`);
@@ -43,10 +23,10 @@ async function request(index) {
         console.log(response.data.teams[index - 1]);
         console.log(response.data.teams[index - 1].strTeam);
         console.log(response.data.teams[index - 1].strTeamLogo);
-        console.log(response.data.teams[index - 1].strDescriptionEN);
         console.log(response.data.teams[index - 1].intFormedYear);
         console.log(response.data.teams[index - 1].strStadiumThumb);
         console.log(response.data.teams[index - 1].strTeamJersey);
+        console.log(response.data.teams[index - 1].strTwitter);
 
         // Putting selected team name on the page
         const rosterDiv = document.querySelector(`#roster`);
@@ -59,12 +39,18 @@ async function request(index) {
         const managerH2 = document.querySelector(`section#teamInfo>#description>h4#manager`)
         const manager = document.createElement(`h3`)
         manager.innerText = response.data.teams[index - 1].strManager;
-        managerH2.append(manager)
+        if (response.data.teams[index-1].strManager == false) {
+            const noManager = document.createElement(`h3`)
+            noManager.innerText = `No Manager Listed`
+            managerH2.append(noManager)
+        } else {
+            managerH2.append(manager)
+        }
 
         // Putting home field name on the page 
         const fieldH2 = document.querySelector(`section#teamInfo>#description>h4#homeField`)
         const field = document.createElement(`h3`)
-        field.innerText = response.data.teams[index-1].strStadium 
+        field.innerText = response.data.teams[index - 1].strStadium
         fieldH2.append(field)
         // Putting team logo on the page
         const logoDiv = document.querySelector(`section#teamInfo>#logo`);
@@ -92,11 +78,21 @@ async function request(index) {
 
         // Selecting social media div
         const socialMediaDiv = document.querySelector(`section#teamInfo>#socialMedia`)
+
         // Putting team twitter on the page
-        const twitter = document.querySelector(`section#teamInfo>#socialMedia>i#twitter`);
-        const twitterLink = document.createElement(`a`);
-        twitterLink.href = response.data.teams[index - 1].strTwitter;
-        twitter.append(twitterLink)
+        const twitter = document.querySelector(`#twitter`);
+        console.log(response.data.teams[index - 1].strTwitter);
+        twitter.href = `https://` + response.data.teams[index - 1].strTwitter;
+
+        // Putting team facebook on page
+        const facebook = document.querySelector(`#facebook`)
+        console.log(response.data.teams[index-1].strFacebook);
+        facebook.href = `https://` + response.data.teams[index - 1].strFacebook;
+       
+        // Putting team instagram on page
+        const instagram = document.querySelector(`#instagram`)
+        console.log(response.data.teams[index-1].strInstagram);
+        instagram.href = `https://` + response.data.teams[index - 1].strInstagram;
 
 
     } catch (err) {
@@ -105,7 +101,7 @@ async function request(index) {
 }
 
 form.addEventListener(`submit`, chicken => {
-    chicken.preventDefault();
+    chicken.preventDefault(); 222
     request(textInput.value);
 });
 
