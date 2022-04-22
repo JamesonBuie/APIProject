@@ -14,93 +14,101 @@
 
 <body>
     <img id="mlbLogoOne" src="mlbLogo.png" alt="MLB Logo">
-    <img id="mlbLogoTwo" src="mlbLogo.png"alt="">
-<header>
-    <div class="titleName">
-        <h1><span>Major League Baseball Team Hub</span></h1>
-    </div>
-    <!-- Search Bar -->
-    <div style="border-bottom: 5px solid white;">
-        <form id="searchBar">
-            <input placeholder="Enter team number" type="text">
-            <input style="background-color: white; color: #002d72; border: 1.8px solid #d50032;" type="submit">
-        </form>
-        <button style="background-color: white; color: #002d72; border: 1.8px solid #d50032;" onclick="refreshPage()" id="resetBtn">Reset Team</button>
-    </div>
-</header>
+    <img id="mlbLogoTwo" src="mlbLogo.png" alt="">
+    <header>
+        <div class="titleName">
+            <h1><span>Major League Baseball Team Hub</span></h1>
+        </div>
+        <!-- Search Bar -->
+        <div style="border-bottom: 5px solid white;">
+            <form id="searchBar">
+                <input placeholder="Enter team number" type="text">
+                <input style="background-color: white; color: #002d72; border: 1.8px solid #d50032;" type="submit">
+            </form>
+            <button style="background-color: white; color: #002d72; border: 1.8px solid #d50032;"
+                onclick="refreshPage()" id="resetBtn">Reset Team</button>
+        </div>
+    </header>
 
     <!-- Team name section -->
-    
+
     <div style="border-top: 5px solid #d50032;">
-    <div id="roster">
+        <div id="roster">
 
-        <h4 style="text-align: center;">MLB Teams</h4>
+            <h4 style="text-align: center;">MLB Teams</h4>
 
-        <ul id="firstHalf">
-            <li> 1. Diamondbacks</li>
-            <li> 2. Braves</li>
-            <li> 3. Orioles</li>
-            <li> 4. Red Sox</li>
-            <li> 5. Cubs</li>
-            <li> 6. White Sox</li>
-            <li> 7. Reds</li>
-            <li> 8. Guardians</li>
-            <li> 9. Rockies</li>
-            <li>10. Tigers</li>
-            <li>11. Astros</li>
-            <li>12. Royals</li>
-            <li>13. Angels</li>
-            <li>14. Dodgers</li>
-            <li>15.Marlins</li>
-        </ul>
-        <ul id="secondHalf">
-            <li>16. Brewers</li>
-            <li>17. Twins</li>
-            <li>18. Mets</li>
-            <li>19. Yankees</li>
-            <li>20. Athletics</li>
-            <li>21. Phillies</li>
-            <li>22. Pirates</li>
-            <li>23. Padres</li>
-            <li>24. Giants</li>
-            <li>25. Mariners</li>
-            <li>26. Cardinals</li>
-            <li>27. Rays</li>
-            <li>28. Rangers</li>
-            <li>29. Blue Jays</li>
-            <li>30. Nationals</li>
-        </ul>
-    </div>
-    <!-- Team info section -->
-    <section id="teamInfo">
-        <!-- First row -->
-        <div id="logo">
-            <h4>Team Logo<h4>
+            <ul id="firstHalf">
+                <li> 1. Diamondbacks</li>
+                <li> 2. Braves</li>
+                <li> 3. Orioles</li>
+                <li> 4. Red Sox</li>
+                <li> 5. Cubs</li>
+                <li> 6. White Sox</li>
+                <li> 7. Reds</li>
+                <li> 8. Guardians</li>
+                <li> 9. Rockies</li>
+                <li>10. Tigers</li>
+                <li>11. Astros</li>
+                <li>12. Royals</li>
+                <li>13. Angels</li>
+                <li>14. Dodgers</li>
+                <li>15.Marlins</li>
+            </ul>
+            <ul id="secondHalf">
+                <li>16. Brewers</li>
+                <li>17. Twins</li>
+                <li>18. Mets</li>
+                <li>19. Yankees</li>
+                <li>20. Athletics</li>
+                <li>21. Phillies</li>
+                <li>22. Pirates</li>
+                <li>23. Padres</li>
+                <li>24. Giants</li>
+                <li>25. Mariners</li>
+                <li>26. Cardinals</li>
+                <li>27. Rays</li>
+                <li>28. Rangers</li>
+                <li>29. Blue Jays</li>
+                <li>30. Nationals</li>
+            </ul>
         </div>
-        <div id="description">
-            <h4 id="manager">Manager</h4>
-            <h4 id="homeField">Home Field Name</h4>
-        </div>
-        <div id="year">
-            <h4 id="yearEst">Year Established<h4>
-                <h4 id="location">Stadium Location</h4>
-        </div>
-        <!-- Second row -->
-        <div id="jersey">
-            <h4>Team Uniform<h4>
-        </div>
-        <div id="stadiumPic">
-            <h4>Picture of Stadium<h4>
-        </div>
-        <div id="socialMedia">
-            <h4>Team Social Media<h4>
-                    <div id="links">
-                        <a id="twitter" href=""> <i class="fa-brands fa-twitter-square"></i> </a>
-                        <a id="facebook" href=""> <i class="fa-brands fa-facebook-square"></i> </a>
-                        <a id="instagram" href=""> <i class="fa-brands fa-instagram-square"></i> </a>
+        <!-- Team info section -->
+        <section id="teamInfo">
+            <!-- First row -->
+            <div id="logo">
+                <h4>Team Logo<h4>
+            </div>
+            <div id="stadiumPic">
+                <h4>Picture of Stadium<h4>
+            </div>
+            <!-- <div id="description">
+                <h4 id="manager">Manager</h4>
+                <h4 id="homeField">Home Field Name</h4>
+            </div> -->
+            <div id="year">
+                <h4 id="yearEst">Year Established<h4>
+                    <h4 id="location">Stadium Location</h4>
+                </div>
+                <!-- Second row -->
+                <div id="jersey">
+                    <h4>Team Uniform<h4>
                     </div>
-        </div>
-    </section>
+                    <div id="description">
+                        <h4 id="manager">Manager</h4>
+                        <h4 id="homeField">Home Field Name</h4>
+                    </div>
+            <!-- <div id="stadiumPic">
+                <h4>Picture of Stadium<h4>
+            </div> -->
+            <div id="socialMedia">
+                <h4>Team Social Media<h4>
+                        <div id="links">
+                            <a id="twitter" href=""> <i class="fa-brands fa-twitter-square"></i> </a>
+                            <a id="facebook" href=""> <i class="fa-brands fa-facebook-square"></i> </a>
+                            <a id="instagram" href=""> <i class="fa-brands fa-instagram-square"></i> </a>
+                        </div>
+            </div>
+        </section>
     </div>
 </body>
 
